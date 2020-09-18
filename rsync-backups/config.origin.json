@@ -1,0 +1,34 @@
+{
+    "name":"Auto Rsync Backups",
+    "version": "20.09.01",
+    "slug": "auto-rsync-backups",
+    "description": "rsync your backup folder to remote server",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "url": "http://github.com/tinysnake",
+    "startup": "application",
+    "boot": "auto",
+    "hassio_api": true,
+    "map":["backup:ro"],
+    "options":{
+        "daysInterval": 7,
+        "exactTime": "04:00",
+        "server": "192.168.1.1",
+        "username": "admin",
+        "password": "password",
+        "path": "/path/to/save/backups",
+        "delete": false,
+        "ssh": false,
+        "filters":[]
+    },
+    "schema": {
+        "daysInterval": "int",
+        "exactTime": "str",
+        "server": "str",
+        "username": "str",
+        "password": "password",
+        "path": "str",
+        "delete": "bool",
+        "ssh": "bool",
+        "filters": ["str"]
+    }
+}

@@ -1,0 +1,13 @@
+set cmd [lindex $argv 0]
+set pass [lindex $argv 1]
+
+eval spawn $cmd
+expect "*assword:"
+send -- "$pass\r"
+expect {
+    "Permission Denied*" { exit 1 }
+    "*Operation timed out*" { exit 2 }
+    "@ERROR: auth failed*" { exit 1 }
+    "rsync: failed to connect*" { exit 2 }
+    eof
+}
