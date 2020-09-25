@@ -82,10 +82,10 @@ Now we can create an automation to run this add-on right after auto backup is co
   action:
     service: hassio.addon_start
     data:
-      addon: rsync-backups
+      addon: rsync_backups
 ```
 
 ## Support
 
-open an issue on my Github!
+open an issue on my [Github Repo](https://github.com/tinysnake/various-backups-hassio-addons/issues)!
 
