@@ -1,10 +1,10 @@
 {
     "name":"Rsync Backups",
     "version": "20.09.01",
-    "slug": "rsync-backups",
+    "slug": "rsync_backups",
     "description": "rsync your backup folder to remote server",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-    "url": "http://github.com/tinysnake",
+    "url": "http://github.com/tinysnake/various-backups-hassio-addons",
     "startup": "once",
     "boot": "manual",
     "hassio_api": true,
